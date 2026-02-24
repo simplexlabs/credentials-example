@@ -272,6 +272,7 @@ export default function Home() {
               />
             </div>
           </div>
+          <div style={{ display: "flex", justifyContent: "center" }}>
           <button
             type="submit"
             disabled={loading}
@@ -300,6 +301,7 @@ export default function Home() {
           >
             {loading ? "Storing..." : "Store Credential"}
           </button>
+          </div>
         </form>
       </div>
 
