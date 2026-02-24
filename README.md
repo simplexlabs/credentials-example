@@ -17,7 +17,7 @@ Add your API key to `.env`:
 SIMPLEX_API_KEY=your_api_key_here
 ```
 
-You can find your API key at [app.simplex.sh/api-keys](https://app.simplex.sh/api-keys).
+You can find your API key at [simplex.sh/api-keys](https://simplex.sh/api-keys).
 
 ## Run
 
