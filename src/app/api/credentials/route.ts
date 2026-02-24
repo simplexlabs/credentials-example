@@ -26,12 +26,14 @@ export async function POST(request: NextRequest) {
   try {
     const client = getClient();
     const { name, value } = await request.json();
+    console.log("[credentials POST] name:", name, "value present:", !!value);
 
     if (!name || !value) {
       return NextResponse.json({ error: "Name and value are required" }, { status: 400 });
     }
 
     const result = await client.storeCredential(name, value);
+    console.log("[credentials POST] result:", JSON.stringify(result));
 
     if (!result.succeeded) {
       return NextResponse.json({ error: result.error || "Failed to store credential" }, { status: 500 });
@@ -39,6 +41,7 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json(result);
   } catch (error) {
+    console.error("[credentials POST] error:", error);
     return NextResponse.json(
       { error: error instanceof Error ? error.message : "Failed to store credential" },
       { status: 500 }

@@ -11,7 +11,7 @@
     "next": "^15",
     "react": "^19",
     "react-dom": "^19",
-    "simplex-ts": "^3.6.26"
+    "simplex-ts": "3.6.27"
   },
   "devDependencies": {
     "@types/node": "^22",
